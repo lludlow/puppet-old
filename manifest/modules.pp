@@ -1,4 +1,4 @@
-# /linuxdist/puppet/manifest/modules.pp
+# /etc/puppet/manifest/modules.pp
 
 import "sudo"
 import "ldapauth"

@@ -1,4 +1,4 @@
-# /linuxdist/puppet/manifest/nodes.pp
+# /etc/puppet/manifest/nodes.pp
 
 
 node basenode {
