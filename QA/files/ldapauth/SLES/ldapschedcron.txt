@@ -1,7 +1,0 @@
-#-------------------
-# sivakuma 01/10/2008
-# 
-# cron ldap Authentication check to run at 2:00am every day.
-#----------------------------------------------------
-00 02 * * * root /etc/crypt/validate_user_passwd.sh
-#----------------------------------------------------
