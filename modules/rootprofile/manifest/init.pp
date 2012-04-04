@@ -1,4 +1,4 @@
-# /linuxdist/puppet/modules/rootprofile/manifest/init.pp
+# /etc/puppet/modules/rootprofile/manifest/init.pp
 
 class rootprofile {
 	file { "/root/.bash_profile":

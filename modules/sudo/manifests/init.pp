@@ -1,4 +1,4 @@
-# /linuxdist/puppet/modules/sudo/manifests/init.pp
+# /etc/puppet/modules/sudo/manifests/init.pp
 
 class sudo {
 

@@ -1,4 +1,4 @@
-# /linuxdist/puppet/modules/setbanner/manifest/init.pp
+# /etc/puppet/modules/setbanner/manifest/init.pp
 
 class setbanner {
 	file { "/etc/issue":

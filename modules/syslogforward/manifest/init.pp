@@ -1,4 +1,4 @@
-# /linuxdist/puppet/modules/syslogforward/manifest/init.pp
+# /etc/puppet/modules/syslogforward/manifest/init.pp
 
 class syslogforward {
 	case $operatingsystem {

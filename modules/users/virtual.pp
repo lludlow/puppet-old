@@ -1,4 +1,4 @@
-# /linuxdist/puppet/modules/users/virtual.pp
+# /etc/puppet/modules/users/virtual.pp
 # Accounts used as system accounts
 
 class sysusers {

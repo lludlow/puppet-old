@@ -1,4 +1,4 @@
-# /linuxdist/puppet/modules/stophpsmh/manifest/init.pp
+# /etc/puppet/modules/stophpsmh/manifest/init.pp
 
 service { "hpsmhd":
 	ensure => "stopped",
