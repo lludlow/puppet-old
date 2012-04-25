@@ -15,7 +15,7 @@
 # Requires:
 #
 # Sample Usage:
-#       resolv_conf { "example":
+#       resolv_conf { "production":
 #                       domainname  => "mydomain",
 #                       searchpath  => ['mydomain', 'test.mydomain'],
 #                       nameservers => ['192.168.1.100', '192.168.1.101', '192.168.1.102'],
