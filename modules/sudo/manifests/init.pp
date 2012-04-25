@@ -2,7 +2,6 @@
 
 class sudo {
 
-	package { sudo: ensure => latest }
 
 	file { "/etc/sudoers":
         	owner => 'root',
