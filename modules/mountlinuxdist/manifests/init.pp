@@ -1,4 +1,4 @@
-# /linuxdist/puppet/modules/mountlinuxdist/manifest/init.pp
+# /etc/puppet/modules/mountlinuxdist/manifest/init.pp
 
 class mountlinuxdist {
 	file { "/mnt/linuxdist":
