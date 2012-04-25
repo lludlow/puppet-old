@@ -17,15 +17,11 @@ class setntp {
 
 	case $operatingsystem {
 		SLES: { exec { "restart ntp":
-			command => "/etc/init.d/ntp stop",
-			command => "/etc/init.d/ntp ntptimeset",
-			command => "/etc/init.d/ntp start"
+			command => "/etc/init.d/ntp restart",
 			}
 		}
 		RedHat: { exec { "restart ntpd":
-			command => "/etc/init.d/ntpd stop",
-			command => "/etc/init.d/ntpd timeset",
-			command => "/etc/init.d/ntpd start"
+			command => "/etc/init.d/ntpd restart",
 			}
 		}
 	}
