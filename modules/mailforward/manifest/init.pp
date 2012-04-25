@@ -6,6 +6,6 @@ class mailforward {
 		owner => "root",
 		group => "root",
 		mode => 0644,
-		source => "puppet:///files/mailforward/.forward"
+		source => "puppet:///files/mailforward/forward"
 	}
 }
