@@ -13,7 +13,7 @@
 # Otherwise provide a space-separated list of ntp servers to query, or
 # set XNTPD_INITIAL_NTPDATE="" to do no initial query at all.
 #
-XNTPD_INITIAL_NTPDATE="172.20.2.208 172.20.2.207"
+XNTPD_INITIAL_NTPDATE="10.30.196.61 172.20.58.61"
 
 ## Type:           string
 ## Default:        "-u ntp"

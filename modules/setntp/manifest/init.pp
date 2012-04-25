@@ -6,7 +6,7 @@ class setntp {
 		owner => "root",
 		group => "root",
 		mode => 0644,
-		source => "puppet:///files/setntp/ntp.conf"
+		source => "puppet:///files/setntp/$operatingsystem/ntp.conf"
 	}
 	
 	file { "/etc/sysconfig/ntp":
@@ -14,7 +14,7 @@ class setntp {
 		owner => "root",
 		group => "root",
 		mode => 0644,
-		source => "puppet:///files/setntp/ntp"
+		source => "puppet:///files/setntp/$operatingsystem/ntp"
 	}
 
 	case $operatingsystem {
