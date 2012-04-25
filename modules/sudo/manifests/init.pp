@@ -8,6 +8,5 @@ class sudo {
 	        group => 'root',
 	        mode  => '0440',
 		source => "puppet:///files/etc/sudoers",
-		require => Package ["sudo"],
     }
 }
