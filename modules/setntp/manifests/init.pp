@@ -2,7 +2,6 @@
 
 class setntp {
 	file { "/etc/ntp.conf":
-		ensure => file,
 		owner => "root",
 		group => "root",
 		mode => 0644,
@@ -10,7 +9,6 @@ class setntp {
 	}
 	
 	file { "/etc/sysconfig/ntp":
-		ensure => file,
 		owner => "root",
 		group => "root",
 		mode => 0644,
