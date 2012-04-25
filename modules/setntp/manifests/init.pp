@@ -1,4 +1,4 @@
-# /etc/puppet/modules/setntp/manifest/init.pp
+# /etc/puppet/modules/setntp/manifests/init.pp
 
 class setntp {
 	file { "/etc/ntp.conf":
