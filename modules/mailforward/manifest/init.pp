@@ -2,7 +2,6 @@
 
 class mailforward {
 	file { "/root/.forward":
-		ensure => file,
 		owner => "root",
 		group => "root",
 		mode => 0644,
