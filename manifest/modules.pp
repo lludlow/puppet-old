@@ -3,7 +3,7 @@
 import "sudo"
 import "ldapauth"
 import "mailforward"
-import "syslogforward"
+#import "syslogforward"
 import "mountlinuxdist"
 #import "setntp"
 #import "synchwclock"
