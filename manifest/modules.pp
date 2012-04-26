@@ -6,7 +6,7 @@ import "mailforward"
 import "syslogforward"
 import "mountlinuxdist"
 import "setntp"
-import "synchwclock"
+#import "synchwclock"
 import "setbanner"
 #import "stophpsmh" #Set as service and class, we need to define this properly
 #import "installtripwire"
