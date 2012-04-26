@@ -1,4 +1,4 @@
-# /linuxdist/puppet/modules/installtsm/manifest/init.pp
+# /linuxdist/puppet/modules/installtsm/manifests/init.pp
 
 class installtsm {
 	file { "/mnt/linuxdist":
@@ -15,7 +15,7 @@ class installtsm {
 		ensure => mounted
 	}
 
-	file { "/mnt/linuxdist/scripts/installtsh.sh":
+	file { "/mnt/linuxdist/scripts/installtsm.sh":
 		ensure => present,
 		owner => "root",
 		group => "root",
