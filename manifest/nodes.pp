@@ -2,7 +2,7 @@
 
 
 node basenode {
-        include sudo, ldapauth, mailforward, setntp
+        include sudo, ldapauth, mailforward, setntp, setbanner
 }
 
 node default inherits basenode {
