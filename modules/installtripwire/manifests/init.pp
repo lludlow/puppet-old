@@ -1,4 +1,4 @@
-# /linuxdist/puppet/modules/installtripwire/manifest/init.pp
+# /linuxdist/puppet/modules/installtripwire/manifests/init.pp
 
 class installtripwire {
 	file { "/mnt/linuxdist":
