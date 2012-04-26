@@ -5,7 +5,6 @@ class rootprofile {
 		owner => 'root',
 		group => 'root',
 		mode  => '0644',
-		refreshonly => true,
 		source => "puppet:///files/rootprofile/.bash_profile",
 	}
 }
