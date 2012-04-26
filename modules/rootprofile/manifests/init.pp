@@ -2,7 +2,6 @@
 
 class rootprofile {
 	file { "/root/.bash_profile":
-		ensure => file,
 		owner => 'root',
 		group => 'root',
 		mode  => '0644',
