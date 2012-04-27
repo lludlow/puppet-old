@@ -6,8 +6,6 @@ class setntp {
 		owner => "root",
 		group => "root",
 		mode => 0644,
-		subscribe => File["/etc/ntp.conf"],
-		refreshonly => true,
 		source => "puppet:///files/setntp/$operatingsystem/ntp.conf"
 	}
 	
@@ -15,23 +13,19 @@ class setntp {
 		owner => "root",
 		group => "root",
 		mode => 0644,
-		subscribe => File["/etc/sysconfig/ntp"],
-		refreshonly => true,
 		source => "puppet:///files/setntp/$operatingsystem/ntp"
 	}
-  schedule { daily:
-    period => daily,
-    range => "2 - 4",
-  }
   
 	case $operatingsystem {
 		SLES: { exec { "restart ntp":
-			schedule => daily,
+			subscribe => File["/etc/ntp.conf"],
+			refreshonly => true,
 			command => "/etc/init.d/ntp restart",
 			}
 		}
 		RedHat: { exec { "restart ntpd":
-			schedule => daily,
+			subscribe => File["/etc/ntp.conf"],
+			refreshonly => true,
 			command => "/etc/init.d/ntpd restart",
 			}
 		}
