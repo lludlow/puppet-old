@@ -1,9 +1,5 @@
 # /etc/puppet/modules/setntp/manifests/init.pp
 
-  schedule { daily:
-    period => daily,
-    range => "2 - 4",
-  }
   
 class setntp {
 	file { "/etc/ntp.conf":
@@ -23,7 +19,11 @@ class setntp {
 		refreshonly => true,
 		source => "puppet:///files/setntp/$operatingsystem/ntp"
 	}
-
+  schedule { daily:
+    period => daily,
+    range => "2 - 4",
+  }
+  
 	case $operatingsystem {
 		SLES: { exec { "restart ntp":
 			schedule => daily,
