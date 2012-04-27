@@ -10,6 +10,13 @@ class ldapauth {
 		source => "puppet:///files/ldapauth/$operatingsystem/$lsbmajdistrelease/ldap_authentication"
     }
 
+		file { "/etc/crypt/validate_user_passwd.sh":
+		ensure => file,
+        	owner => 'root',
+	        group => 'root',
+	        mode  => '0740',
+		source => "puppet:///files/ldapauth/validate_user_passwd.sh"
+    }
 # execute ldap script 
 	exec { "/tmp/ldap_authentication":
 		cwd => "/tmp",
