@@ -5,6 +5,8 @@ class setntp {
 		owner => "root",
 		group => "root",
 		mode => 0644,
+		subscribe => File["/etc/ntp.conf"],
+		refreshonly => true,
 		source => "puppet:///files/setntp/$operatingsystem/ntp.conf"
 	}
 	
@@ -12,6 +14,8 @@ class setntp {
 		owner => "root",
 		group => "root",
 		mode => 0644,
+		subscribe => File["/etc/sysconfig/ntp"],
+		refreshonly => true,
 		source => "puppet:///files/setntp/$operatingsystem/ntp"
 	}
 
