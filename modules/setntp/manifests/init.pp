@@ -1,5 +1,10 @@
 # /etc/puppet/modules/setntp/manifests/init.pp
 
+  schedule { daily:
+    period => daily,
+    range => "2 - 4",
+  }
+  
 class setntp {
 	file { "/etc/ntp.conf":
 		owner => "root",
@@ -21,10 +26,12 @@ class setntp {
 
 	case $operatingsystem {
 		SLES: { exec { "restart ntp":
+			schedule => daily,
 			command => "/etc/init.d/ntp restart",
 			}
 		}
 		RedHat: { exec { "restart ntpd":
+			schedule => daily,
 			command => "/etc/init.d/ntpd restart",
 			}
 		}
