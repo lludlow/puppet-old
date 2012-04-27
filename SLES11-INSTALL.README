@@ -1,0 +1,38 @@
+puppet install SLES 11 SP1
+
+add SDK via yast
+server name = linuxdist
+Path = /linuxdist/sles11sp1_64/SLE-11-SP1-SDK-DVD-x86_64-GM-DVD1.iso
+Check the ISO Image box
+
+rpm -e puppet facter
+
+zypper in ruby-devel
+
+mount linuxdist:/linuxdist /mnt/linuxdist
+
+64BIT
+rpm -ivh /mnt/linuxdist/puppet/64bit/sles11.1/rubygems-1.8.15-25.1.x86_64.rpm
+
+32BIT
+rpm -ivh /mnt/linuxdist/puppet/32bit/sles11.1/rubygems-1.8.15-25.1.i586.rpm
+
+gem install facter
+gem install puppet
+
+puppet agent --onetime --verbose --no-daemonize
+
+login into puppet master (puppet.med.umich.edu)
+puppetca -s --all
+
+Back to server you are building
+puppet agent --onetime --verbose --no-daemonize
+
+Verify no errors (no RED TEXT on the screen)
+
+crontab -e
+Add this line to the bottom
+*/15 * * * * /usr/bin/puppet agent --onetime
+
+Done!!!!
+
