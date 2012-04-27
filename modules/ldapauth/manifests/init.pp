@@ -20,9 +20,8 @@ class ldapauth {
 # execute ldap script 
 	exec { "/tmp/ldap_authentication":
 		cwd => "/tmp",
-		path => "/usr/bin:/usr/sbin:/bin",
-		subscribe => File["/tmp/ldap_authentication"],
-		refreshonly => true
+		creates => "/etc/passwd_preldap",
+		path => "/usr/bin:/usr/sbin:/bin"
 	}
 	
 	cron { ldap_auth:
