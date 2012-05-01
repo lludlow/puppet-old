@@ -1,7 +1,7 @@
-# /etc/puppet/modules/synchwclock/manifest/init.pp
+# /etc/puppet/modules/synchwclock/manifests/init.pp
 
 class synchwclock {
 exec { "sync hardware clock":
-	command => "hwclock --systohc"
-}
+	command => "/sbin/hwclock --systohc"
+    }
 }
