@@ -8,7 +8,7 @@ import "mountlinuxdist"
 import "setntp"
 #import "synchwclock" #Broken
 import "setbanner"
-import "stophpsmh" #Set as service and class, we need to define this properly
+import "stophpsmh" 
 #import "installtripwire"
 #import "installtsm"
 import "rootprofile"
