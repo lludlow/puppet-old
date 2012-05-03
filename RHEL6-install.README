@@ -33,3 +33,4 @@ Add this line to the bottom
 */15 * * * * /usr/bin/puppet agent --onetime
 
 Done!!!!
+
