@@ -1,0 +1,111 @@
+##Puppet Server installation##
+
+##RHEL 6 base image##
+
+rpm -ivh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-5.noarch.rpm
+rpm --import http://passenger.stealthymonkeys.com/RPM-GPG-KEY-stealthymonkeys.asc
+yum install http://passenger.stealthymonkeys.com/rhel/6/passenger-release.noarch.rpm
+
+yum install httpd mysql-server svn puppet-server ruby rubygems mod_passenger mysql ruby-mysql ruby-lib-** ruby-compiler**
+
+##Install rake##
+cd ~/
+wget http://rubyforge.org/frs/download.php/56872/rake-0.8.7.tgz
+tar -xzvf rake-0.8.7.tgz
+cd rake-0.8.7
+ruby install.rb
+
+##grab the latest puppet-dashboard archive from linuxdist/puppet##
+
+tar -xzvf puppetlabs-puppet-dashboard-1.2.7-2-g536fd23.tar.gz
+mv puppetlabs-puppet-dashboard-536fd23 /var/www/html/puppet-dashboard
+chown -Rf apache.nobody /var/www/html/*
+cd /var/www/html/puppet-dashboard/config/
+cp database.yml.example database.yml
+cp settings.yml.example settings.yml
+
+#edit database.yml and add username/password for the mysql DB we will create
+#edit settings.yml to reflect hostname and the following
+#change all refrences to the server "puppet" with the hostname of the puppet server you are building
+#change inventory service and file bucket to true and add the hostname of the puppet server
+##Add this line to the time_zone section
+time_zone: 'Eastern Time (US & Canada)'
+comment out datetime_format and add the following
+datetime_format: '%m-%d-%Y %H:%M %Z'
+date_format: '%A, %B %e, %Y'
+
+cp /var/www/html/puppet-dashboard/ext/passenger/dashboard-vhost.conf /etc/httpd/conf.d/
+#edit dashboard-vhost.conf with the proper locations/ServerName, also comment out the lines at the top LoadModule, PassengerRoot, PassengerRuby
+#BE SURE TO REMOVE THE #COMMENTS asfter the ServerName
+#It should look something like this when done
+
+# UPDATE THESE PATHS TO SUIT YOUR ENVIRONMENT
+#LoadModule passenger_module /var/lib/gems/1.8/gems/passenger-2.2.11/ext/apache2/mod_passenger.so
+#PassengerRoot /var/lib/gems/1.8/gems/passenger-2.2.11
+#PassengerRuby /usr/bin/ruby
+
+# you may want to tune these settings
+PassengerHighPerformance on
+PassengerMaxPoolSize 12
+PassengerPoolIdleTime 1500
+# PassengerMaxRequests 1000
+PassengerStatThrottleRate 120
+RailsAutoDetect On
+
+<VirtualHost *:80>
+        ServerName lnxpup-preprod01.med.umich.edu
+        DocumentRoot /var/www/html/puppet-dashboard/public/
+        <Directory /var/www/html/puppet-dashboard/public/>
+                Options None
+                Order allow,deny
+                allow from all
+        </Directory>
+  ErrorLog /var/log/httpd/dashboard_error.log
+  LogLevel warn
+  CustomLog /var/log/httpd/dashboard_access.log combined
+  ServerSignature On
+  
+##MySql Time##
+
+/etc/init.d/mysqld start
+/usr/bin/mysql_secure_installation
+#say yes to everything, there is no root password at this time
+
+mysql -u root -p
+CREATE DATABASE dashboard_production CHARACTER SET utf8;
+CREATE USER 'dashboard'@'localhost' IDENTIFIED BY 'goblue';
+GRANT ALL PRIVILEGES ON dashboard_production.* TO 'dashboard'@'localhost';
+commit;
+quit;
+
+vi /etc/my.cnf
+
+##ADD the following lines (including the line that starts with #)
+
+# Allowing 32MB allows an occasional 17MB row with plenty of spare room
+max_allowed_packet = 32M
+
+/etc/init.d/mysqld restart
+
+cd /var/www/html/puppet-dashboard
+rake RAILS_ENV=production db:migrate
+env RAILS_ENV=production script/delayed_job -p dashboard -n 4 -m start
+/etc/init.d/httpd restart
+
+rm -Rf /etc/puppet/*
+
+##Check out the puppet master config (replace branches with trunk for prod)
+
+svn co http://lnxsvn-prod01.med.umich.edu/repos/puppet-prod/{branches|trunk}/{DEV|PREPROD} /etc/puppet/
+chown -Rf puppet.puppet /etc/puppet/*
+
+
+## The first time Puppet Master is ran it must be ran with this command to generate the proper CA##
+## The server name and fqdn need to be seperated by a comma with out a space##
+
+puppet master --verbose --no-daemonize --dns_alt_names {PUPPET SERVER FQDN,PUPPET SERVER NAME}
+
+
+
+
+
