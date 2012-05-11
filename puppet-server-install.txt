@@ -107,5 +107,81 @@ puppet master --verbose --no-daemonize --dns_alt_names {PUPPET SERVER FQDN,PUPPE
 
 
 
+## ADD a client before going any further
+##FOLLOW CLIENT INSTRUCTIONS
 
+## Now that everything works lets get apache in front of puppet
+
+yum install mod_ssl
+
+mkdir -p /usr/share/puppet/rack/puppetmasterd
+mkdir /usr/share/puppet/rack/puppetmasterd/public /usr/share/puppet/rack/puppetmasterd/tmp
+cp /usr/share/puppet/ext/rack/files/config.ru /usr/share/puppet/rack/puppetmasterd/
+chown puppet /usr/share/puppet/rack/puppetmasterd/config.ru
+
+
+
+
+
+
+## This will be a new file
+vi /etc/httpd/conf.d/puppetmaster.conf
+
+Listen 8140
+<VirtualHost *:8140>
+
+    SSLEngine on
+    SSLCipherSuite SSLv2:-LOW:-EXPORT:RC4+RSA
+    SSLCertificateFile      /var/lib/puppet/ssl/certs/lnxpup-dev01.med.umich.edu.pem
+    SSLCertificateKeyFile   /var/lib/puppet/ssl/private_keys/lnxpup-dev01.med.umich.edu.pem
+    SSLCertificateChainFile /var/lib/puppet/ssl/ca/ca_crt.pem
+    SSLCACertificateFile    /var/lib/puppet/ssl/ca/ca_crt.pem
+    # CRL checking should be enabled; if you have problems with Apache complaining about the CRL, disable the next line
+    SSLCARevocationFile     /var/lib/puppet/ssl/ca/ca_crl.pem
+    SSLVerifyClient optional
+    SSLVerifyDepth  1
+    SSLOptions +StdEnvVars
+
+    # The following client headers allow the same configuration to work with Pound.
+    RequestHeader set X-SSL-Subject %{SSL_CLIENT_S_DN}e
+    RequestHeader set X-Client-DN %{SSL_CLIENT_S_DN}e
+    RequestHeader set X-Client-Verify %{SSL_CLIENT_VERIFY}e
+
+    RackAutoDetect On
+    DocumentRoot /usr/share/puppet/rack/puppetmasterd/public/
+    <Directory /usr/share/puppet/rack/puppetmasterd/>
+        Options None
+        AllowOverride None
+        Order allow,deny
+        allow from all
+    </Directory>
+</VirtualHost>
+
+#Shutdown puppetmaster
+/etc/init.d/puppetmaster stop
+
+#restart apache (STOP then wait 1 minute for passenger to unload, then START)
+/etc/init.d/httpd stop
+sleep 120
+/etc/init.d/httpd start
+
+## Need init scripts for the dashboard workers
+cp /var/www/html/puppet-dashboard/ext/packaging/redhat/puppet-dashboard-workers.init /etc/init.d/puppet-dashboard-workers
+
+## Edit the file to have correct default path by changing the below section
+
+# The default dashboard root if not set in sysconfig
+: ${DASHBOARD_HOME:=/var/www/html/puppet-dashboard}
+
+## Copy over the sysconfig info for the dashboard workers
+cp /var/www/html/puppet-dashboard/ext/packaging/redhat/puppet-dashboard.sysconfig /etc/sysconfig/puppet-dashboard
+
+## Edit the file to reflect the proper paths, port, and user
+
+DASHBOARD_HOME=/var/www/html/puppet-dashboard
+DASHBOARD_USER=puppet
+DASHBOARD_RUBY=/usr/bin/ruby
+DASHBOARD_ENVIRONMENT=production
+DASHBOARD_IFACE=0.0.0.0
+DASHBOARD_PORT=80
 
