@@ -1,0 +1,25 @@
+RedHat 5.x 64bit Puppet install
+
+rpm -Uvh http://mirror.cc.columbia.edu/pub/linux/epel/5/x86_64/epel-release-5-4.noarch.rpm
+
+yum -y install rubygems
+
+## Ignore errors about main page README ##
+gem install facter puppet
+
+
+puppet agent --onetime --verbose --no-daemonize
+
+##login into puppet master (puppet) as ROOT and sign the client certificate##
+puppetca -s --all
+exit
+
+
+##Back to server you are building##
+puppet agent --onetime --verbose --no-daemonize
+
+##Verify no errors (no RED TEXT on the screen)##
+
+crontab -e
+##Add this line to the bottom##
+*/15 * * * * /usr/bin/puppet agent --onetime
