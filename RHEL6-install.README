@@ -11,7 +11,7 @@ scroll to the bottom and click "Change Subscription"
 
 Goto the server you are performing the installation on
 
-yum install rubygems
+yum -y install rubygems
 
 ##say yes to everything##
 
