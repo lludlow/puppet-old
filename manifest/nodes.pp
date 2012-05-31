@@ -17,5 +17,5 @@ include sudo, ldapauth, mailforward, setntp, setbanner, rootprofile, syslogforwa
 }
 
 node /^lnxvom-prod01/ {
-        include sudo, ldapauth, mailforward, setntp, setbanner, rootprofile, syslogforward, locate, stophpsmh
+        include sudo, mailforward, setntp, setbanner, rootprofile, syslogforward, locate, stophpsmh
 }
