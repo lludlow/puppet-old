@@ -16,3 +16,6 @@ node /^slp\d+$/ {
 include sudo, ldapauth, mailforward, setntp, setbanner, rootprofile, syslogforward, sshkeys, locate
 }
 
+node /^lnxvom-prod01/ {
+        include sudo, ldapauth, mailforward, setntp, setbanner, rootprofile, syslogforward, locate, stophpsmh
+}

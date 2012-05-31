@@ -20,9 +20,18 @@ rpm -ivh /mnt/linuxdist/puppet/64bit/sles11.1/rubygems-1.8.15-25.1.x86_64.rpm
 ##32BIT##
 rpm -ivh /mnt/linuxdist/puppet/32bit/sles11.1/rubygems-1.8.15-25.1.i586.rpm
 
+#####IF the server does not have access to the internet the .gem files are hosted on the puppet server see below##########
 ## Ignore errors about main page README ##
-gem install facter
-gem install puppet
+gem install --source http://puppet/facter-1.6.9.gem
+gem install --source http://puppet/puppet-2.7.14.gem
+
+##If the server is not able to reach the internet ##
+wget http://puppet/puppet-2.7.14.gem
+wget http://puppet/facter-1.6.9.gem
+gem install facter-1.6.9.gem
+gem install puppet-2.7.14.gem
+
+
 
 puppet agent --onetime --verbose --no-daemonize 
 
