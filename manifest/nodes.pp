@@ -19,3 +19,7 @@ include sudo, ldapauth, mailforward, setntp, setbanner, rootprofile, syslogforwa
 node /^lnxvom-prod01/ {
         include sudo, mailforward, setntp, setbanner, rootprofile, syslogforward, locate, stophpsmh
 }
+
+node /^netapp-prod01/ {
+        include sudo, ldapauth, mailforward, setntp, setbanner, rootprofile, sshkeys, locate, stophpsmh
+}
