@@ -9,7 +9,7 @@ node default inherits basenode {
 }
 
 node /^lnxmgt/ {
-include setbanner, rootprofile, syslogforward, locate, sudo, mailforward
+include setbanner, rootprofile, locate, sudo, mailforward
 }
 
 node /^slp\d+$/ {
