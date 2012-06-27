@@ -7,7 +7,5 @@ fi
 
 # User specific environment and startup programs
 
-PATH=$PATH:$HOME/bin
-
-export PATH
+export PATH="$PATH:$HOME/bin:/opt/VRTS/bin/"
 export TMOUT=28800
