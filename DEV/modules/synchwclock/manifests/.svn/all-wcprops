@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/puppet-prod/!svn/ver/97/branches/DEV/modules/synchwclock/manifests
+END
+init.pp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/puppet-prod/!svn/ver/97/branches/DEV/modules/synchwclock/manifests/init.pp
+END

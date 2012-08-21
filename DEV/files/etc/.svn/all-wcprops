@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/puppet-prod/!svn/ver/211/branches/DEV/files/etc
+END
+cleancron
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/puppet-prod/!svn/ver/211/branches/DEV/files/etc/cleancron
+END
+sudoers
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/puppet-prod/!svn/ver/170/branches/DEV/files/etc/sudoers
+END
+ntp.conf
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/puppet-prod/!svn/ver/30/branches/DEV/files/etc/ntp.conf
+END
+sshd_config
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/etc/sshd_config
+END
+foo.config
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/etc/foo.config
+END
+itworked
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/etc/itworked
+END
+authorized_keys2
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/etc/authorized_keys2
+END

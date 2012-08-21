@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/puppet-prod/!svn/ver/234/branches/DEV/files/usermaint/lnxpup-rhel62
+END
+local.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/puppet-prod/!svn/ver/234/branches/DEV/files/usermaint/lnxpup-rhel62/local.erb
+END
+ldap.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/puppet-prod/!svn/ver/234/branches/DEV/files/usermaint/lnxpup-rhel62/ldap.erb
+END

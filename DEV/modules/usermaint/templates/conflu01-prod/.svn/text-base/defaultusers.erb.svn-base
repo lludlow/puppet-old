@@ -1,0 +1,33 @@
+100:x:100:101:User for D-BUS:/var/run/dbus:/bin/false
+101:x:101:102:User for haldaemon:/var/run/hal:/bin/false
+at:x:25:25:Batch jobs daemon:/var/spool/atjobs:/bin/bash
+bin:x:1:1:bin:/bin:/bin/bash
+daemon:x:2:2:Daemon:/sbin:/bin/bash
+ftp:x:40:49:FTP account:/srv/ftp:/bin/bash
+games:x:12:100:Games account:/var/games:/bin/bash
+gdm:x:50:105:Gnome Display Manager daemon:/var/lib/gdm:/bin/false
+haldaemon:x:101:102:User for haldaemon:/var/run/hal:/bin/false
+lp:x:4:7:Printing daemon:/var/spool/lpd:/bin/bash
+mail:x:8:12:Mailer daemon:/var/spool/clientmqueue:/bin/false
+messagebus:x:100:101:User for D-BUS:/var/run/dbus:/bin/false
+nobody:x:65534:65533:nobody:/var/lib/nobody:/bin/bash
+ntp:x:74:103:NTP daemon:/var/lib/ntp:/bin/false
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/bin/false
+root:x:0:0:root:/root:/bin/bash
+sshd:x:71:65:SSH daemon:/var/lib/sshd:/bin/false
+suse-ncc:x:102:104:Novell Customer Center User:/var/lib/YaST2/suse-ncc-fakehome:/bin/bash
+wwwrun:x:30:8:WWW daemon apache:/var/lib/wwwrun:/bin/false
+lnxnvlteam:x:24021:100:lnxnvlteam:/home/lnxnvlteam:/bin/bash
+hpsmh:x:103:1001::/opt/hp/hpsmh:/sbin/nologin
+hpsystemprtl:x:240321:10104:hpsystemprtl:/home/hpsystemprtl:/bin/bash
+scopemonitor:x:241298:10:scopemonitor:/home/scopemonitor:/bin/bash
+roller:x:252872:10:Application Account:/home/roller:/bin/bash
+mdraw:x:252873:10:Application Account:/home/mdraw:/bin/bash
+atlassian:x:252876:10:Jira Application Account:/home/atlassian:/bin/bash
+mysql:x:92504:502:MySQL database admin:/home/mysql:/bin/bash
+postgres:x:26:26:PostgreSQL Server:/var/lib/pgsql/:/bin/bash
+man:x:13:62:Manual pages viewer:/var/cache/man:/bin/bash
+news:x:9:13:News system:/etc/news:/bin/bash
+uucp:x:10:14:Unix-to-Unix CoPy system:/etc/uucp:/bin/bash
+root2:x:0:0:Second root:/home/root2:/bin/bash
+webinfuser:x:252877:1002:Jira Application User:/home/webinfuser:/bin/bash

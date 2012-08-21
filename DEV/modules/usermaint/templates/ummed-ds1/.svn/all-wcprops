@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/ummed-ds1
+END
+ldapusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/ummed-ds1/ldapusers.erb
+END
+defaultusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/ummed-ds1/defaultusers.erb
+END

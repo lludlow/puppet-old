@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/puppet-prod/!svn/ver/97/branches/DEV/modules/setntp/manifests
+END
+init.pp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/puppet-prod/!svn/ver/97/branches/DEV/modules/setntp/manifests/init.pp
+END

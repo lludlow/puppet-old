@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/perfcap-stage01
+END
+ldapusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/perfcap-stage01/ldapusers.erb
+END
+defaultusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/perfcap-stage01/defaultusers.erb
+END

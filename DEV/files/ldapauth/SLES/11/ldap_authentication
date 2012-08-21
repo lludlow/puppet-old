@@ -1,0 +1,81 @@
+#!/bin/bash
+ZLMAPPLYDATE=`date`
+ZLMLOGFILE="ZLMPoliciesApplied.log"
+ZLMPOLICYNAME="Authentication "
+ZLMPOLICYVERSION="006"
+MOUNTPOINT="/mnt/linuxdist"
+#-------------------
+
+# 
+# Anyone changing the file must log who made the change
+#
+#
+#      policy created by kumar 8/28/2007  
+#      policy modified by kumar 1/10/2008 to include creating a crontab to merger the password file. 
+
+if [ -e /etc/DontApplyLDAPPolicy ]; then
+  echo "$ZLMPOLICYNAME v.$ZLMPOLICYVERSION Policy NOT applied $ZLMAPPLYDATE (file /etc/DontApplyLDAPPolicy found)" >> /var/log/$ZLMLOGFILE
+  exit
+fi
+
+if [ ! -d "${MOUNTPOINT}" ]; then
+   mkdir $MOUNTPOINT
+else
+   MAXCOUNT=`df -h | grep ${MOUNTPOINT} | grep -v grep | wc -l`
+   COUNT=1
+   while [ "$COUNT" -le "$MAXCOUNT" ]
+   do
+      umount $MOUNTPOINT
+      echo "Unmounted $COUNT"
+      COUNT=$(($COUNT+1))
+  done
+fi
+
+mount -t nfs 172.20.2.59:/linuxdist $MOUNTPOINT
+sleep 3
+
+MTAB=`grep $MOUNTPOINT /etc/mtab`
+if [ -z "${MTAB}" ]; then
+  echo "$ZLMPOLICYNAME v.$ZLMPOLICYVERSION Policy NOT applied $ZLMAPPLYDATE (linuxdist cannot be mounted)" >> /var/log/$ZLMLOGFILE
+  exit
+fi
+if [ ! -e /etc/pam.d/sshd_preldap ]; then
+    mkdir /etc/crypt
+    mv /etc/pam.d/su /etc/pam.d/su_preldap
+    mv /etc/pam.d/login /etc/pam.d/login_preldap
+    mv /etc/pam.d/sshd /etc/pam.d/sshd_preldap
+    mv /etc/ldap.conf /etc/ldap.conf_preldap
+    cp /etc/passwd /etc/passwd_preldap
+    cp /etc/shadow /etc/shadow_preldap
+    cp /etc/passwd /etc/crypt/passwd_local
+    cp /etc/shadow /etc/crypt/shadow_local
+    cp -p $MOUNTPOINT/Auth_Scripts/login /etc/pam.d/
+    cp -p $MOUNTPOINT/Auth_Scripts/su /etc/pam.d/
+    cp -p $MOUNTPOINT/Auth_Scripts/su-l /etc/pam.d/
+    cp -p $MOUNTPOINT/Auth_Scripts/sshd /etc/pam.d/
+    cp -p $MOUNTPOINT/Auth_Scripts/sudo /etc/pam.d/
+    cp -p $MOUNTPOINT/Auth_Scripts/ldap.conf /etc/
+    cp -p $MOUNTPOINT/Auth_Scripts/validate_user_passwd.sh /etc/crypt/
+    cp -p $MOUNTPOINT/Auth_Scripts/common-account-pc /etc/pam.d/
+    cp -p $MOUNTPOINT/Auth_Scripts/common-auth-pc /etc/pam.d/
+    cp -p $MOUNTPOINT/Auth_Scripts/common-password-pc /etc/pam.d/
+    cp -p $MOUNTPOINT/Auth_Scripts/common-session-pc /etc/pam.d
+    chmod -R 400 /etc/crypt/
+    chmod 755 /etc/crypt/validate_user_passwd.sh
+    echo "$ZLMPOLICYNAME v.$ZLMPOLICYVERSION Policy applied $ZLMAPPLYDATE " >> /var/log/$ZLMLOGFILE
+else
+    echo "$ZLMPOLICYNAME v.$ZLMPOLICYVERSION Policy already applied $ZLMAPPLYDATE " >> /var/log/$ZLMLOGFILE
+    exit
+fi
+if [ -z "`cat /etc/crontab | grep validate_user_passwd.sh`" ]
+      then
+        cat $MOUNTPOINT/Auth_Scripts/ldapschedcron.txt >> /etc/crontab
+
+        if [ -z "`cat /etc/crontab | grep validate_user_passwd.sh`" ]
+          then
+          echo "$ZLMPOLICYNAME v.$ZLMPOLICYVERSION not completely successfull as crontab cannot be modifed " >> /var/log/$ZLMLOGFILE
+        fi
+fi
+# before unmounting, wait a little time
+sleep 5
+umount $MOUNTPOINT

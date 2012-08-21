@@ -1,0 +1,12 @@
+/var/log/slpd.log {
+    compress
+    dateext
+    rotate 2
+    daily     
+    notifempty
+    missingok
+    create 600 root root
+    postrotate
+     /etc/init.d/slpd restart
+    endscript
+}

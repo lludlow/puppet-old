@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/puppet-prod/!svn/ver/164/branches/DEV/files/sshd_config/SLES
+END
+sshd_config_64
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/puppet-prod/!svn/ver/164/branches/DEV/files/sshd_config/SLES/sshd_config_64
+END
+sshd_config
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/puppet-prod/!svn/ver/164/branches/DEV/files/sshd_config/SLES/sshd_config
+END

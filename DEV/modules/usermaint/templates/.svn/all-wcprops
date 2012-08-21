@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/puppet-prod/!svn/ver/264/branches/DEV/modules/usermaint/templates
+END
+common.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/common.erb
+END
+hpsmh.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/hpsmh.erb
+END
+idmteam.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/idmteam.erb
+END
+linuxteam.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/puppet-prod/!svn/ver/252/branches/DEV/modules/usermaint/templates/linuxteam.erb
+END

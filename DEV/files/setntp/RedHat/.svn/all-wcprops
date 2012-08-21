@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/puppet-prod/!svn/ver/30/branches/DEV/files/setntp/RedHat
+END
+ntp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/puppet-prod/!svn/ver/30/branches/DEV/files/setntp/RedHat/ntp
+END
+ntp.conf
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/puppet-prod/!svn/ver/30/branches/DEV/files/setntp/RedHat/ntp.conf
+END

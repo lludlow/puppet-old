@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/puppet-prod/!svn/ver/192/branches/DEV/files/syslogforward/RedHat
+END
+syslog.conf
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/puppet-prod/!svn/ver/192/branches/DEV/files/syslogforward/RedHat/syslog.conf
+END
+rsyslog.conf
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/puppet-prod/!svn/ver/189/branches/DEV/files/syslogforward/RedHat/rsyslog.conf
+END

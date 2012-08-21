@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/umrsapp-prod01
+END
+ldapusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/umrsapp-prod01/ldapusers.erb
+END

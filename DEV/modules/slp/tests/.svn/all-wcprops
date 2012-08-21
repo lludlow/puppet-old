@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/puppet-prod/!svn/ver/88/branches/DEV/modules/slp/tests
+END
+init.pp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/puppet-prod/!svn/ver/88/branches/DEV/modules/slp/tests/init.pp
+END

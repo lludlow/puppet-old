@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/puppet-prod/!svn/ver/29/branches/DEV/modules/resolver/templates
+END
+resolv.conf.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/puppet-prod/!svn/ver/29/branches/DEV/modules/resolver/templates/resolv.conf.erb
+END

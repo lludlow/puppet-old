@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/puppet-prod/!svn/ver/225/branches/DEV/files/rootprofile
+END
+.bash_profile
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/puppet-prod/!svn/ver/225/branches/DEV/files/rootprofile/.bash_profile
+END

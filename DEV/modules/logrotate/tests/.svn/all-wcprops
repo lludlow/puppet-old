@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/puppet-prod/!svn/ver/88/branches/DEV/modules/logrotate/tests
+END
+init.pp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/puppet-prod/!svn/ver/88/branches/DEV/modules/logrotate/tests/init.pp
+END

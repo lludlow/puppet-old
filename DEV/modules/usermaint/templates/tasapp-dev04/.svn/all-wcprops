@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/tasapp-dev04
+END
+ldapusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/tasapp-dev04/ldapusers.erb
+END
+defaultusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/tasapp-dev04/defaultusers.erb
+END

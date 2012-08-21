@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/puppet-prod/!svn/ver/135/branches/DEV/modules/installtripwire/manifests
+END
+init.pp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/puppet-prod/!svn/ver/135/branches/DEV/modules/installtripwire/manifests/init.pp
+END

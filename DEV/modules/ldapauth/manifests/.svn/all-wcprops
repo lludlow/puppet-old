@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/puppet-prod/!svn/ver/88/branches/DEV/modules/ldapauth/manifests
+END
+init.pp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/puppet-prod/!svn/ver/88/branches/DEV/modules/ldapauth/manifests/init.pp
+END

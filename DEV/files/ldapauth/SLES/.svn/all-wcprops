@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/puppet-prod/!svn/ver/88/branches/DEV/files/ldapauth/SLES
+END
+su-l
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/su-l
+END
+validate_user_passwd.sh
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/validate_user_passwd.sh
+END
+sshd
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/sshd
+END
+common-account
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/common-account
+END
+ldap.conf
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/ldap.conf
+END
+login.test
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/login.test
+END
+common-auth
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/common-auth
+END
+ldapschedcron.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/ldapschedcron.txt
+END
+su
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/su
+END
+common-password-pc
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/common-password-pc
+END
+ldap_authentication.sh
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/ldap_authentication.sh
+END
+login
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/login
+END
+common-session-pc
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/common-session-pc
+END
+sudo
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/SLES/sudo
+END

@@ -1,0 +1,3 @@
+scopemonitor:x:241298:100:Site Scope Monitor:/home/scopemonitor:/bin/bash
+hpsystemprtl:x:240321:10104:HP SMH::/sbin/nologin
+puppet:x:107:111:Puppet daemon:/var/lib/puppet:/bin/false

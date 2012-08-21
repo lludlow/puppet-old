@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/ctsapp-proda2
+END
+ldapusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/ctsapp-proda2/ldapusers.erb
+END
+defaultusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/ctsapp-proda2/defaultusers.erb
+END

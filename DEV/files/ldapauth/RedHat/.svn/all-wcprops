@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/puppet-prod/!svn/ver/88/branches/DEV/files/ldapauth/RedHat
+END
+sshd
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/RedHat/sshd
+END
+validate_user_passwd.sh
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/RedHat/validate_user_passwd.sh
+END
+system-auth
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/RedHat/system-auth
+END
+ldap.conf
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/RedHat/ldap.conf
+END
+login.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/RedHat/login.test
+END
+authconfig
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/RedHat/authconfig
+END
+su
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/RedHat/su
+END
+login
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/RedHat/login
+END
+sudo
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/ldapauth/RedHat/sudo
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/slp01
+END
+ldapusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/slp01/ldapusers.erb
+END
+defaultusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/slp01/defaultusers.erb
+END

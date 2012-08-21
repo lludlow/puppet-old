@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/idmidv-preprod04
+END
+ldapusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/idmidv-preprod04/ldapusers.erb
+END
+defaultusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/idmidv-preprod04/defaultusers.erb
+END

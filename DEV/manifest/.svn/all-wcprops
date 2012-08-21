@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/puppet-prod/!svn/ver/258/branches/DEV/manifest
+END
+site.pp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/puppet-prod/!svn/ver/93/branches/DEV/manifest/site.pp
+END
+modules.pp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/puppet-prod/!svn/ver/184/branches/DEV/manifest/modules.pp
+END
+nodes.pp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/puppet-prod/!svn/ver/258/branches/DEV/manifest/nodes.pp
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/lnxmgt-qa02
+END
+ldapusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/lnxmgt-qa02/ldapusers.erb
+END
+defaultusers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/puppet-prod/!svn/ver/261/branches/DEV/modules/usermaint/templates/lnxmgt-qa02/defaultusers.erb
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/puppet-prod/!svn/ver/88/branches/DEV/files/mailforward
+END
+.forward
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/puppet-prod/!svn/ver/18/branches/DEV/files/mailforward/.forward
+END
+forward
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/puppet-prod/!svn/ver/88/branches/DEV/files/mailforward/forward
+END

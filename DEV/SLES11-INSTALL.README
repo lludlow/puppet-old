@@ -1,0 +1,45 @@
+##puppet DEV install SLES 11 SP1##
+
+##add SDK iso as a repository##
+zypper ar -c -t yast2 "iso:/?iso=SLE-11-SP1-SDK-DVD-x86_64-GM-DVD1.iso&url=nfs://linuxdist/linuxdist/sles11sp1_64" "SLE-11-SP1-SDK"
+chmod -x /etc/cron.daily/default_settings
+
+##Remove OS version of puppet and facter##
+rpm -e puppet facter
+##ignore insserv errors##
+
+zypper in ruby-devel 
+## If you get an error choose  Solution 1: downgrade of ruby-1.8.7.p357-0.7.1.x86_64 to ruby-1.8.7.p72-5.30.5.x86_64 ##
+
+##Mount Linuxdist if it is not already mounted##
+mount linuxdist:/linuxdist /mnt/linuxdist
+
+##64BIT##
+rpm -ivh /mnt/linuxdist/puppet/64bit/sles11.1/rubygems-1.8.15-25.1.x86_64.rpm
+
+##32BIT##
+rpm -ivh /mnt/linuxdist/puppet/32bit/sles11.1/rubygems-1.8.15-25.1.i586.rpm
+
+## Ignore errors about main page README ##
+gem install facter
+gem install puppet
+
+puppet agent --onetime --verbose --no-daemonize --server lnxpup-dev01.med.umich.edu
+
+##login into puppet master (lnxpup-dev01) as ROOT and sign the client certificate##
+puppetca -s --all
+exit
+
+
+##Back to server you are building##
+puppet agent --onetime --verbose --no-daemonize --server lnxpup-dev01.med.umich.edu
+
+##Verify no errors (no RED TEXT on the screen)##
+
+crontab -e
+##Add this line to the bottom##
+*/15 * * * * /usr/bin/puppet agent --onetime --server lnxpup-dev01.med.umich.edu
+
+
+
+

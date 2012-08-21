@@ -1,0 +1,12 @@
+/var/spool/compaq/cma.log {
+    compress
+    dateext
+    rotate 2
+    daily     
+    notifempty
+    missingok
+    create 770 root hpsmh
+    postrotate
+     /etc/init.d/hpasm restart
+    endscript
+}

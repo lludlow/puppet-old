@@ -1,0 +1,9 @@
+davidch:x:37345:10001:David Hasselbach:/idm/idmt_home/home/davidch:/bin/bash
+dmitriyk:x:204255:10001:Dmitriy Kashchenko:/idm/idmt_home/home/dmitriyk:/bin/bash
+gokulava:x:858757:10001:Gokulavasan Kaliappa Guruswamy:/idm/idmt_home/home/gokulava:/bin/bash
+mkijewsk:x:92331:10001:Mike Kijewski:/idm/idmt_home/home/mkijewsk:/bin/bash
+praveenm:x:839953:10001:Praveen Madoori:/idm/idmt_home/home/praveenm:/bin/bash
+sgr:x:20045:10001:Steve Rothwell:/idm/idmt_home/home/sgr:/bin/bash
+shrbhagw:x:860687:10001:Shrikant Bhagwat:/idm/idmt_home/home/shrbhagw:/bin/bash
+lnxidmteam:x:240011:10001:Linux IDM Team User:/idm/idmt_home/home/lnxidmteam:/bin/bash
+idm-monitor:x:265879:10001:IDM Team Monitor Account:/idm/idmt_home/home/idm-monitor:/bin/bash
