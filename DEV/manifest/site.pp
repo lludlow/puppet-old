@@ -2,7 +2,7 @@
 import "nodes"
 import "modules"
 
-filebucket { main: server => 'lnxpup-dev01.med.umich.edu' }
+filebucket { main: server => 'lnxpup-dev01' }
 File { backup => main }
 Exec { path => "/usr/bin:/usr/sbin:/bin:/sbin" }
 
